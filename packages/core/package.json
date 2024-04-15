@@ -1,0 +1,27 @@
+{
+  "name": "react-helm",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && vite build"
+  },
+  "keywords": [],
+  "author": "ben",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "vite-plugin-dts": "^3.8.3"
+  }
+}
