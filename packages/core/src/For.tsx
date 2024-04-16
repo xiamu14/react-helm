@@ -1,6 +1,6 @@
 import { Fragment, isValidElement } from "react";
 import type { ReactElement, ReactNode } from "react";
-import { validElement } from "../../helper/validElement";
+import validElement from "./validElement";
 
 interface ForProps<T, U extends ReactNode> {
   /** Array to iterate over */
@@ -15,7 +15,7 @@ interface ForProps<T, U extends ReactNode> {
 /** Component for mapping an array into collection of ReactNode's
  * Omits nullish children and provides keys if they're not specified.
  */
-export function For<T, U extends ReactNode>({ children, each, fallback = null }: ForProps<T, U>): ReactElement | null {
+export default function For<T, U extends ReactNode>({ children, each, fallback = null }: ForProps<T, U>): ReactElement | null {
   if (!Array.isArray(each) || !each.length || children == null) {
     return validElement(fallback);
   }

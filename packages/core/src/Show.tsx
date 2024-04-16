@@ -6,6 +6,6 @@ export interface ShowProps {
   children: React.ReactNode;
 }
 
-export function Show({ when, fallback, children }: ShowProps): JSX.Element {
+export default function Show({ when, fallback, children }: ShowProps): JSX.Element {
   return Boolean(when) ? <>{children}</> : fallback ? fallback() : <></>;
 }

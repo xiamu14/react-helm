@@ -5,7 +5,7 @@ enum State {
   FINISHED,
 }
 
-export function useDelayAnime({ delay, period, onRun, onFinish, debug }: { delay: number; period: number; onRun?: () => void; onFinish?: () => void; debug?: boolean }) {
+export default function useDelayAnime({ delay, period, onRun, onFinish, debug }: { delay: number; period: number; onRun?: () => void; onFinish?: () => void; debug?: boolean }) {
   const [state, setState] = useState<State>();
   const startRef = useRef<number>(0);
   const delayRef = useRef<number>(delay);

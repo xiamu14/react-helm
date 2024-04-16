@@ -1,7 +1,7 @@
 import { isValidElement } from "react";
 import type { ReactElement, ReactNode } from "react";
 
-export function validElement(item: ReactNode | undefined | null): ReactElement | null {
+export default function validElement(item: ReactNode | undefined | null): ReactElement | null {
   if (item == null) {
     return null;
   }

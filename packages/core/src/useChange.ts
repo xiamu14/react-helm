@@ -4,7 +4,7 @@
 
 import isEqual from "lodash/isEqual";
 import { useEffect, useRef } from "react";
-export function useChange<T>(action: (prop: T) => void, prop: T) {
+export default function useChange<T>(action: (prop: T) => void, prop: T) {
   const prev = useRef<T | undefined>();
   const actionRef = useRef(action);
 
