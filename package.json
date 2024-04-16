@@ -19,6 +19,7 @@
     "@types/lodash": "^4.17.0",
     "@types/react": "^18.2.78",
     "@types/react-dom": "^18.2.25",
+    "renew-it": "^1.5.2",
     "typescript": "^5.4.5",
     "vite": "^5.2.0"
   }
